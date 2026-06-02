@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^node -e \"const fs=require\\('fs'\\); const path=require\\('path'\\); const dir=path\\.join\\('node_modules','@clerk','nextjs'\\); if\\(!fs\\.existsSync\\(dir\\)\\)\\{console\\.error\\('no dir',dir\\); process\\.exit\\(1\\);\\} const walk=\\(d\\)=>\\{for\\(const f of fs\\.readdirSync\\(d\\)\\)\\{const p=path\\.join\\(d,f\\); if\\(fs\\.statSync\\(p\\)\\.isDirectory\\(\\)\\) walk\\(p\\); else if\\(p\\.endsWith\\('\\.d\\.ts'\\)\\|\\|p\\.endsWith\\('\\.ts'\\)\\|\\|p\\.endsWith\\('\\.js'\\)\\)\\{const c=fs\\.readFileSync\\(p,'utf8'\\); if\\(c\\.includes\\('afterSignInUrl'\\)\\|\\|c\\.includes\\('redirectUrl'\\)\\|\\|c\\.includes\\('signUpUrl'\\)\\|\\|c\\.includes\\('path='\\)\\) console\\.log\\(p\\);\\}\\}\\}; walk\\(dir\\);\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}
