@@ -1,3 +1,7 @@
+import {ClerkProvider} from "@clerk/nextjs";
+import { SignInButton, SignUpButton, Show, UserButton } from "@clerk/nextjs";
+import { Button } from "@/components/ui/button";
+import { shadcn } from "@clerk/ui/themes";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -25,9 +29,33 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col bg-background text-foreground">
+        <ClerkProvider appearance={{ theme: shadcn }}>
+          <header className="bg-card border-b border-border">
+            <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+              <h1 className="text-2xl font-bold">Link Shortener</h1>
+              <div className="flex gap-4 items-center">
+                <Show when="signed-out">
+                  <SignInButton>
+                    <Button variant="ghost" size="sm">Sign in</Button>
+                  </SignInButton>
+                  <SignUpButton>
+                    <Button variant="default" size="sm">Sign up</Button>
+                  </SignUpButton>
+                </Show>
+                <Show when="signed-in">
+                  <UserButton />
+                </Show>
+              </div>
+            </nav>
+          </header>
+          <main className="flex-1">
+            {children}
+          </main>
+        </ClerkProvider>
+      </body>
     </html>
   );
 }
