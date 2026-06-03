@@ -1,3 +1,6 @@
+---
+description: Read this before creating or modifying UI components in the project.
+---
 # UI Styling
 
 ## shadcn/ui only

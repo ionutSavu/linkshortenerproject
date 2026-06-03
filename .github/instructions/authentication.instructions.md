@@ -1,3 +1,7 @@
+---
+description: Read this beafore implementing or modifying authentication in the project.
+---
+
 # Authentication
 
 ## Clerk-only authentication

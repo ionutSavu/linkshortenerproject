@@ -14,10 +14,6 @@ This is the **Link Shortener** application:
 
 ## Quick Navigation
 
-All detailed guidelines are in the `/docs` directory. It is incredibly important to ALWAYS read the relevant individual `.md` file in `/docs` BEFORE generating any code:
-
-- Auth guidelines → `AUTHENTICATION.md`
-- UI guidelines → `UI_STYLING.md`
 
 ## Core Principles for Agents
 
@@ -165,7 +161,7 @@ Get keys from:
 - **Drizzle**: https://orm.drizzle.team
 - **Tailwind**: https://tailwindcss.com
 - **shadcn/ui**: https://ui.shadcn.com
-- **Project Docs**: `/docs` directory
+
 
 ## Before Committing
 
@@ -176,17 +172,5 @@ npm run build       # Verify build succeeds
 npm run dev         # Test locally
 ```
 
-## Questions?
-
-Refer to the detailed guides in `/docs/`:
-- Architecture questions → `PROJECT_OVERVIEW.md`
-- Code style questions → `CODE_STANDARDS.md`
-- Auth questions → `AUTHENTICATION.md`
-- Database questions → `DATABASE.md`
-- UI questions → `UI_STYLING.md`
-- Pattern questions → `NEXTJS_PATTERNS.md`
-- Workflow questions → `DEVELOPMENT_GUIDE.md`
-
----
 
 **Last Updated**: May 29, 2026 | **Version**: 1.0.0
